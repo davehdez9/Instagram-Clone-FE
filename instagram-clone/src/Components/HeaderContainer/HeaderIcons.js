@@ -22,7 +22,11 @@ function HeaderIcons() {
     <HeaderIconStyles>
       <Icon>
         <FontAwesomeIcon icon={faCompass} />
+      </Icon>
+      <Icon>
         <FontAwesomeIcon icon={faHeart} />
+      </Icon>
+      <Icon>
         <FontAwesomeIcon icon={faUser} />
       </Icon>
     </HeaderIconStyles>
