@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderContainer from './Components/HeaderContainer/HeaderContainer';
+import PostContainer from './Components/PostContainer/PostContainer';
 import styled from 'styled-components';
 
 const AppStyles = styled.div`
@@ -14,6 +15,7 @@ function App() {
     <AppStyles>
       <div className="App">
         <HeaderContainer />
+        <PostContainer />
       </div>
     </AppStyles>
   );
