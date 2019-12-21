@@ -3,13 +3,13 @@ import { mockData } from './MockData';
 import styled from 'styled-components';
 
 const PostHeaderStyle = styled.div`
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: flex;
   align-items: baseline;
-  padding-left: 10px;
+  padding: 10px 0 10px 20px;
 `;
 
 const Username = styled.div`

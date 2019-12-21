@@ -6,7 +6,7 @@ import PostComments from './PostComments';
 import styled from 'styled-components';
 
 const PostContainerStyle = styled.div`
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
