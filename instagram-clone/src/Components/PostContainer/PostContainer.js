@@ -1,8 +1,5 @@
 import React from 'react';
-import PostHeader from './PostHeader';
-import PostImage from './PostImage';
-import PostLikeIcons from './PostLikesIcons';
-import PostComments from './PostComments';
+import PostCard from './PostCard';
 import styled from 'styled-components';
 
 const PostContainerStyle = styled.div`
@@ -15,10 +12,11 @@ const PostContainerStyle = styled.div`
 function PostContainer() {
   return (
     <PostContainerStyle>
-      <PostHeader />
+      {/* <PostHeader />
       <PostImage />
       <PostLikeIcons />
-      <PostComments />
+      <PostComments /> */}
+      <PostCard />
     </PostContainerStyle>
   );
 }
