@@ -11,20 +11,20 @@ const PostHeaderStyle = styled.div`
   height: auto;
   margin: 0 auto;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   padding: 10px 0 10px 20px;
 `;
 
 const Username = styled.div`
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
-  padding-left: 20px;
+  padding: 0 15px;
 `;
 
 const Thumbnail = styled.img`
   position: relative;
-  width: 2%;
-  height: 2%;
+  width: 1.7rem;
+  height: 1.7rem;
 `;
 
 const EditImage = styled.img`
@@ -40,23 +40,54 @@ const LikesIconsStyle = styled.div`
 `;
 
 const IconsStyle = styled.div`
-  width: 8%;
-  margin: 2px;
+  width: 55px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  font-size: 1.25rem;
 `;
 
 const LikesStyle = styled.div`
   font-size: 1rem;
-  width: 10%;
-  padding-left: 5px;
+  padding: 5px;
+  font-weight: bold;
 `;
+
+const PostComments = styled.div`
+  display: flex;
+  align-items: baseline;
+  line-height: 0px;
+  padding-left: 15px;
+`;
+
+const Placeholder = styled.input`
+  border: solid green;
+  padding: 10%;
+  ::placeholder {
+    height: 10px;
+    padding: 15px;
+    text-align: left;
+  }
+`;
+
+{
+  mockData.map(data => {
+    console.log('data: ', data);
+
+    data.comments.map(comment => {
+      console.log('username: ', comment.username);
+    });
+  });
+}
 
 function PostCard() {
   return (
     <div>
       {mockData.map(data => {
-        console.log(data);
+        {
+          /* {
+          console.log(data.comments);
+        } */
+        }
         return (
           <div className="PostCard">
             <PostHeaderStyle>
@@ -65,16 +96,35 @@ function PostCard() {
               <Username>{data.username}</Username>
             </PostHeaderStyle>
 
-            <EditImage src={data.imageUrl} alt="postImage" />
+            <>
+              <EditImage src={data.imageUrl} alt="postImage" />
+            </>
 
             <LikesIconsStyle>
               <div key={data.id}></div>
               <IconsStyle>
-                <FontAwesomeIcon icon={faHeart} />
-                <FontAwesomeIcon icon={faComment} />
+                <FontAwesomeIcon className="icon" icon={faHeart} />
+                <FontAwesomeIcon className="icon" icon={faComment} />
               </IconsStyle>
               <LikesStyle>{data.likes} likes</LikesStyle>
             </LikesIconsStyle>
+
+            {data.comments.map(comment => {
+              console.log('username in card: ', comment.username);
+              return (
+                <PostComments>
+                  <div key={comment.id}></div>
+                  <Username>{comment.username}</Username>
+                  <div className="text">
+                    <p>{comment.text}</p>
+                  </div>
+                </PostComments>
+              );
+            })}
+
+            <PostComments>
+              <Placeholder type="text" placeholder="Add Comment ..." />
+            </PostComments>
           </div>
         );
       })}

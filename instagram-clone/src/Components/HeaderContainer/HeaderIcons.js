@@ -12,7 +12,7 @@ const HeaderIconStyles = styled.div`
 `;
 
 const Icon = styled.div`
-  font-size: 40px;
+  font-size: 25px;
   padding: 15px;
   }
 `;
