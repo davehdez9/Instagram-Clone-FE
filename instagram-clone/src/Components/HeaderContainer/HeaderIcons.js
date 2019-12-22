@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faCompass } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faCompass } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';
 
 const HeaderIconStyles = styled.div`
@@ -12,7 +12,7 @@ const HeaderIconStyles = styled.div`
 `;
 
 const Icon = styled.div`
-  font-size: 40px;
+  font-size: 25px;
   padding: 15px;
   }
 `;

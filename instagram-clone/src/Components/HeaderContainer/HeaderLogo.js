@@ -10,12 +10,12 @@ const HeaderLogoStyles = styled.div`
 `;
 
 const Icon = styled.div`
-  font-size: 40px;
+  font-size: 30px;
   padding: 0 15px;
 `;
 
 const Logo = styled.div`
-  font-size 40px;
+  font-size 35px;
   font-family: 'Oleo Script', cursive;
   padding: 0 15px;
   border-left: 1px solid darkgrey;
